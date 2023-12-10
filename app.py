@@ -55,7 +55,7 @@ def clear_transactions():
 
         if csvfile.tell() == 0:
             writer.writeheader()
-    return render_template('landing_page.html')
+    return redirect(url_for('landing_page'))
 
 
 @app.route('/download_csv')
