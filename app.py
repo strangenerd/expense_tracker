@@ -44,7 +44,7 @@ def submit():
                 })
 
 
-    return redirect(url_for('index'))
+    return redirect(url_for('index.html'))
 
 @app.route('/clear_transactions')
 def clear_transactions():
