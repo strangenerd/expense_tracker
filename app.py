@@ -43,9 +43,7 @@ def submit():
                     'Category1': category
                 })
 
-        return render_template('index.html')
-    else:
-        return render_template('index.html')
+    return render_template('index.html')
 
 @app.route('/clear_transactions')
 def clear_transactions():
@@ -54,8 +52,7 @@ def clear_transactions():
         fieldnames = ['Type', 'Timestamps', 'Amount', 'Description', 'Category', 'Category1']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-        if csvfile.tell() == 0:
-            writer.writeheader()
+        writer.writeheader()
     return redirect(url_for('landing_page'))
 
 
