@@ -3,6 +3,7 @@ body {
     color: #fff;
     font-family: 'Arial', sans-serif;
     display: flex;
+    flex-direction: column;  /* Change to column */
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -11,6 +12,10 @@ body {
 
 h1 {
     color: #66D9EF;
+}
+
+button {
+    margin-top: 10px;  /* Add margin-top to space buttons */
 }
 
 form {
@@ -62,5 +67,3 @@ select {
 textarea {
     resize: vertical;
 }
-
-/* Add the rest of your styling here */
