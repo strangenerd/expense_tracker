@@ -43,7 +43,7 @@ def submit():
                     'Category1': category
                 })
 
-        return redirect(url_for('index.html'))
+        return render_template('index.html')
     else:
         return render_template('index.html')
 
