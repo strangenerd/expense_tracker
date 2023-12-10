@@ -43,8 +43,9 @@ def submit():
                     'Category1': category
                 })
 
-
-    return redirect(url_for('index.html'))
+        return redirect(url_for('index.html'))
+    else:
+        return render_template('index.html')
 
 @app.route('/clear_transactions')
 def clear_transactions():
