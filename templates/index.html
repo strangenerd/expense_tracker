@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body> 
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        <form action="{{ url_for('submit') }}" method="post">
+            <label for="transaction_type">Type of Transaction:</label>
+            <select name="transaction_type" id="transaction_type" required>
+                <option value="Expense">Expense</option>
+                <option value="Income">Income</option>
+            </select>
+
+            <label for="amount">Amount:</label>
+            <input type="number" name="amount" id="amount" required>
+
+            <label for="description">Description:</label>
+            <textarea name="description" id="description" maxlength="200" required></textarea>
+
+            <label for="category">Category:</label>
+            <select name="category" id="category" required>
+                <!-- Options will be dynamically populated using JavaScript -->
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <script>
+            var transactionTypeSelect = document.getElementById('transaction_type');
+            var categorySelect = document.getElementById('category');
+
+            // Define the event listener
+            transactionTypeSelect.addEventListener('change', function () {
+                var transactionType = this.value;
+
+                // Clear existing options
+                categorySelect.innerHTML = '';
+
+                // Populate options based on transaction type
+                if (transactionType === 'Expense') {
+                    var expenseCategories = ['Food', 'Gifts', 'Health/medical', 'Rent', 'Debt', 'Personal', 'Travel', 'SIPs', 'Internet and Phone', 'Unexpected', 'Other'];
+                    populateOptions(categorySelect, expenseCategories);
+                } else if (transactionType === 'Income') {
+                    var incomeCategories = ['Paycheck', 'Bonus', 'Interest', 'Other'];
+                    populateOptions(categorySelect, incomeCategories);
+                }
+            });
+
+            // Trigger the change event once to set the initial options
+            transactionTypeSelect.dispatchEvent(new Event('change'));
+
+            function populateOptions(selectElement, options) {
+                for (var i = 0; i < options.length; i++) {
+                    var option = document.createElement('option');
+                    option.value = options[i];
+                    option.text = options[i];
+                    selectElement.appendChild(option);
+                }
+            }
+        </script>
+
+    </div>
+</body>
+</html>

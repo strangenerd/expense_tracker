@@ -1,0 +1,66 @@
+body {
+    background-color: #272822;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: #66D9EF;
+}
+
+form {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #66D9EF;
+    border-radius: 8px;
+    background-color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #66D9EF;
+}
+
+input,
+textarea,
+select,
+button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #66D9EF;
+    border-radius: 4px;
+    background-color: #444;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #66D9EF;
+    color: #272822;
+    cursor: pointer;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23fff"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 20px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Add the rest of your styling here */
