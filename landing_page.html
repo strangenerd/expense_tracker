@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+</head>
+<body>
+    <h1>Welcome to the Landing Page</h1>
+    <a href="{{ url_for('clear_transactions') }}"><button>Clear Transactions</button></a>
+    <a href="{{ url_for('submit') }}"><button>File a Transaction</button></a>
+    <a href="{{ url_for('download_csv') }}"><button>Download CSV</button></a>
+</body>
+</html>
