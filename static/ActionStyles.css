@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #333;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.headingAndButtons {
+    text-align: center;
+}
+
+h1 {
+    color: #61dafb; /* A shade of blue that goes well with dark mode */
+    font-size: 36px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.button-container {
+    margin-top: 10px;
+}
+
+.button {
+    display: block;
+    width: 200px;
+    padding: 15px 30px;
+    margin: 0 auto;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #61dafb; /* Same shade of blue as the heading */
+    border-radius: 8px;
+    color: #000000;
+    /* background: #007bff; */
+    background: linear-gradient(to right, #007bff, #0056b3);
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 10px;
+}
+
+
+button {
+    background-color: #007bff;
+    color: #272822;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: linear-gradient(to right, #0056b3, #003366);
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='ActionStyles.css') }}">
+</head>
+<body>
+    <div class="headingAndButtons">
+    <h1>Actions</h1>
+    <div class="button-container"><a href="{{ url_for('clear_transactions') }}" class="button">Clear Transactions</a></div>
+    <div class="button-container"><a href="{{ url_for('submit') }}" class="button">File a Transaction</a></div>
+    <div class="button-container"><a href="{{ url_for('download_csv') }}" class="button">Download CSV</a></div>
+    </div>
+</body>
+</html>
