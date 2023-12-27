@@ -1,8 +1,7 @@
-from flask import Flask, render_template, request, redirect, url_for, send_file
+from flask import Flask, render_template, request, redirect, send_file
 import csv
 from datetime import datetime
 import os
-from time import sleep
 
 app = Flask(__name__)
 
